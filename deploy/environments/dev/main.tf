@@ -11,8 +11,8 @@ resource "azurerm_resource_group" "acr_rg" {
 }
 
 module "shared_infra" {
-  source = "../../modules/shared_infrastructure"
-  rg_name = azurerm_resource_group.acr_rg.name
-  env = local.env
+  source   = "../../modules/shared_infrastructure"
+  rg_name  = azurerm_resource_group.acr_rg.name
+  env      = local.env
   location = azurerm_resource_group.acr_rg.location
 }
