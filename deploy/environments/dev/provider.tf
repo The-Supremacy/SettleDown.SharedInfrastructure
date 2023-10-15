@@ -21,12 +21,14 @@ terraform {
 }
 
 provider "azurerm" {
-  subscription_id = var.dev_subscription_id
+  subscription_id            = var.target_subscription_id
+  skip_provider_registration = "true"
   features {}
 }
 
 provider "azurerm" {
-  subscription_id = var.shared_subscription_id
-  alias           = "shared"
+  subscription_id            = var.shared_subscription_id
+  alias                      = "shared"
+  skip_provider_registration = "true"
   features {}
 }

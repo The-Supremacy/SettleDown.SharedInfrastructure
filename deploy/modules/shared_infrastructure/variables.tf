@@ -1,8 +1,8 @@
-variable "env" {  
+variable "env" {
 }
 
-variable "rg_name" {    
+variable "rg_name" {
 }
 
-variable "location" {    
+variable "location" {
 }

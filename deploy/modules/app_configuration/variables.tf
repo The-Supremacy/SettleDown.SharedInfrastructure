@@ -1,7 +1,7 @@
 variable "rg_name" {
 }
 
-variable "key_vault_name" {
+variable "app_config_name" {
 }
 
 variable "location" {

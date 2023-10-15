@@ -1,7 +1,7 @@
 variable "rg_name" {
 }
 
-variable "key_vault_name" {
+variable "log_analytics_workspace_name" {
 }
 
 variable "location" {
