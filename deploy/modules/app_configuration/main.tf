@@ -10,3 +10,9 @@ resource "azurerm_app_configuration" "app_config" {
     Environment = "Dev"
   }
 }
+
+resource "azurerm_role_assignment" "example" {
+  scope                = azurerm_app_configuration.app_config.id
+  role_definition_name = "App Configuration Data Reader"
+  principal_id         = var.shared_identity_principal_id
+}
