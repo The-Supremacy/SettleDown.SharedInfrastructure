@@ -24,7 +24,6 @@ jobs:
       ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
       ARM_SUBSCRIPTION_ID: ${{ secrets.SETTLEDOWN_AZURE_SHARED_SUBSCRIPTION_ID }}
-      TF_VAR_shared_subscription_id: ${{ secrets.SETTLEDOWN_AZURE_SHARED_SUBSCRIPTION_ID }}
       TF_VAR_target_subscription_id: ${{ secrets.SETTLEDOWN_AZURE_DEV_SUBSCRIPTION_ID }}
     steps:
     - name: Checkout    
