@@ -48,7 +48,7 @@ module "aca_env" {
   source                     = "github.com/The-Supremacy/SettleDown.InfrastructureModules//aca_environment"
   rg_name                    = var.rg_name
   location                   = var.location
-  cae_name                   = local.app_config_name
+  cae_name                   = local.ca_environment_name
   ai_name                    = local.ca_environment_ai_name
   log_workspace_workspace_id = module.log_analytics_workspace.log_id
   tags                       = local.tags
