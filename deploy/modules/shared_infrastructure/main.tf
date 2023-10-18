@@ -14,7 +14,7 @@ resource "azurerm_user_assigned_identity" "shared_identity" {
 }
 
 module "key_vault" {
-  source                       = "../keyvault"
+  source                       = "github.com/The-Supremacy/SettleDown.InfrastructureModules//keyvault"
   rg_name                      = var.rg_name
   key_vault_name               = local.key_vault_name
   location                     = var.location
@@ -22,7 +22,7 @@ module "key_vault" {
 }
 
 module "app_config" {
-  source                       = "../app_configuration"
+  source                       = "github.com/The-Supremacy/SettleDown.InfrastructureModules//app_configuration"
   rg_name                      = var.rg_name
   app_config_name              = local.app_config_name
   location                     = var.location
@@ -30,14 +30,14 @@ module "app_config" {
 }
 
 module "log_analytics_workspace" {
-  source                       = "../log_analytics_workspace"
+  source                       = "github.com/The-Supremacy/SettleDown.InfrastructureModules//log_analytics_workspace"
   rg_name                      = var.rg_name
   log_analytics_workspace_name = local.log_analytics_workspace_name
   location                     = var.location
 }
 
 module "aca_env" {
-  source                     = "../aca_environment"
+  source                     = "github.com/The-Supremacy/SettleDown.InfrastructureModules//aca_environment"
   rg_name                    = var.rg_name
   location                   = var.location
   cae_name                   = local.app_config_name
