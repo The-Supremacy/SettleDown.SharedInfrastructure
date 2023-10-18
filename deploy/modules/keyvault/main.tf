@@ -24,7 +24,7 @@ resource "azurerm_key_vault" "key_vault" {
   }
 }
 
-resource "azurerm_role_assignment" "example" {
+resource "azurerm_role_assignment" "role_assignment" {
   scope                = azurerm_key_vault.key_vault.id
   role_definition_name = "Key Vault Secrets User"
   principal_id         = var.shared_identity_principal_id

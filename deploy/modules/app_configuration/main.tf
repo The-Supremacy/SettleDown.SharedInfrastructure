@@ -11,7 +11,7 @@ resource "azurerm_app_configuration" "app_config" {
   }
 }
 
-resource "azurerm_role_assignment" "example" {
+resource "azurerm_role_assignment" "role_assignment" {
   scope                = azurerm_app_configuration.app_config.id
   role_definition_name = "App Configuration Data Reader"
   principal_id         = var.shared_identity_principal_id
